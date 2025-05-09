@@ -1,12 +1,13 @@
 /********** Template CSS **********/
 :root {
-    --primary: #FF5E14;
+    --primary: #ff1b1b;
     --secondary: #5F656F;
     --light: #F5F5F5;
     --dark: #02245B;
     --Black: #000000;
     --gris: #212529;
     --new: #383c41;
+    --naranja: #FF5E14;
 }
 
 .back-to-top {
