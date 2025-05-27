@@ -1,3 +1,4 @@
+ /********** Webstrixrd **********/
  document.addEventListener('DOMContentLoaded', function () {
     const links = document.querySelectorAll('.dropdown-item'); // Seleccionamos todos los enlaces del dropdown
     const sections = {}; // Objeto para guardar las secciones y sus elementos DOM

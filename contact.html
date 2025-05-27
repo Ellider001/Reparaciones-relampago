@@ -1,3 +1,4 @@
+<!-- Webstrixrd -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,7 +54,7 @@
                     <a class="btn btn-link text-light" href="https://www.instagram.com/reparacionesrelampago/"><i class="fab fa-instagram"></i>
                     <a class="btn btn-link text-light" href="https://www.facebook.com/share/1He1E5PmXf/"><i class="fab fa-facebook-f"></i>
                     <a class="btn btn-link text-light" href="https://www.youtube.com/@relampago60"><i class="fab fa-youtube"></i>
-                    <a class="btn btn-link text-light" href="https://mail.google.com/mail/?view=cm&fs=1&to=relampago@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a class="btn btn-link text-light" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@reparacionesrelampago.com"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
             <div class="col-lg-6 text-end">
@@ -163,7 +164,14 @@
                             </div>
                             <div class="ms-4">
                                 <p class="mb-2">Correo Electrónico</p>
-                                <h3 class="mb-0">relampago@gmail.com</h3>
+                                <h3 class="email-text">info@reparacionesrelampago.com</h3>
+                           <style>
+                           @media (max-width: 768px) {
+                           .email-text {
+                           font-size: 0.9rem; /* Más pequeño en móviles y tablets */
+                             }
+                            }
+                          </style>
                             </div>
                         </div>
                     </div>
@@ -175,16 +183,16 @@
                 <form id="cita-form">
                     <div class="row g-3">
                         <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control" placeholder="Nombre" name="nombre" required>
+                            <input type="text" class="form-control" placeholder="Nombre" name="nombre" autocomplete="off" required>
                         </div>
                         <div class="col-12 col-sm-6">
-                            <input type="email" class="form-control" placeholder="Correo Electrónico" name="correo" required>
+                            <input type="email" class="form-control" placeholder="Correo Electrónico" name="correo" autocomplete="off" autocomplete="new-email"  required>
                         </div>
                         <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control" placeholder="Número de Teléfono" name="telefono" required>
+                            <input type="text" class="form-control" placeholder="Número de Teléfono" name="telefono" autocomplete="off" required>
                         </div>
                         <div class="col-12 col-sm-6">
-                            <select class="form-select" name="servicio" required>
+                            <select class="form-select" name="servicio" autocomplete="off" required>
                                 <option value="" disabled selected>Selecciona el Servicio</option>
                                 <option value="Remodelación">Remodelación</option>
                                 <option value="Diseño de plano">Diseño de plano</option>
@@ -194,27 +202,27 @@
                         <div class="col-12 col-sm-6">
                             <div class="d-flex flex-column align-items-center bg-light" style="width: 100%; padding: 10px; border-radius: 8px;">
                                 <label for="fecha" class="text-primary">Selecciona una fecha</label>
-                                <input type="date" class="form-control" name="fecha" required>
+                                <input type="date" class="form-control" name="fecha" autocomplete="off" required>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">
                             <div class="d-flex flex-column align-items-center bg-light" style="width: 100%; padding: 10px; border-radius: 8px;">
                                 <label for="hora" class="text-primary">Selecciona la hora</label>
-                                <input type="time" class="form-control" name="hora" required>
+                                <input type="time" class="form-control" name="hora" autocomplete="off" required>
                             </div>
                         </div>
                         <!-- Casilla de Ubicación -->
                         <div class="col-12">
                             <div class="d-flex flex-column align-items-center bg-light" style="width: 100%; padding: 10px; border-radius: 8px;">
                                 <label for="ubicacion" class="text-primary">Ubicación</label>
-                                <input type="text" class="form-control" placeholder="Ingresa tu ubicación" name="ubicacion" required>
+                                <input type="text" class="form-control" placeholder="Ingresa tu ubicación" name="ubicacion" autocomplete="off" required>
                             </div>
                         </div>
                         <!-- Casilla de Mensaje -->
                         <div class="col-12">
                             <div class="d-flex flex-column align-items-center bg-light" style="width: 100%; padding: 10px; border-radius: 8px;">
                                 <label for="mensaje" class="text-primary">Mensaje</label>
-                                <textarea class="form-control" rows="5" placeholder="Escribe tu mensaje" name="mensaje" required></textarea>
+                                <textarea class="form-control" rows="5" placeholder="Escribe tu mensaje" name="mensaje" autocomplete="off" required></textarea>
                             </div>
                         </div>
                         <div class="col-12">
@@ -231,7 +239,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        emailjs.init("RDQRuJcpNqK8w0XBt"); // Asegúrate de usar tu Public Key de EmailJS
+        emailjs.init("UqY5InHZulhQVqyJO"); // Asegúrate de usar tu Public Key de EmailJS
 
         document.getElementById("cita-form").addEventListener("submit", function (event) {
             event.preventDefault(); // Evitar que la página se recargue
@@ -259,7 +267,7 @@
             }
 
             // Enviar formulario a EmailJS
-            emailjs.send("service_jhtasrg", "template_ahkrrcs", formData)
+            emailjs.send("service_2nyunyd", "template_ccppkt8", formData)
                 .then(function (response) {
                     console.log("SUCCESS!", response);
                     alert("¡Cita reservada con éxito! Te contactaremos pronto.");
@@ -303,7 +311,7 @@
                     </a>
                     <p class="presentacion__contenido__titulo4">Correo Electrónico</p>
                     <p class="presentacion__contenido__texto">Reparaciones Relampago</p>
-                    <p class="presentacion__contenido__texto">reparacionesrelampagord@gmail.com</p>
+                    <p class="presentacion__contenido__texto">info@reparacionesrelampago.com</p>
                 </figure>
             </div>
 
@@ -366,7 +374,7 @@
                         <a class="btn btn-square btn-primary rounded-circle me-2" href="https://www.instagram.com/reparacionesrelampago/"><i class="fab fa-instagram"></i>
                             <a class="btn btn-square btn-primary rounded-circle me-2" href="https://www.facebook.com/share/1He1E5PmXf/" target="_blank"><i class="fab fa-facebook-f"></i>
                         <a class="btn btn-square btn-primary rounded-circle me-2" href="https://www.youtube.com/@relampago60"><i class="fab fa-youtube"></i>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fas fa-envelope"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@reparacionesrelampago.com"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </div>
